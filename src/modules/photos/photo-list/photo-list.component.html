@@ -1,0 +1,10 @@
+${ HeaderView }
+<section class="container section">
+  <h1 class="title">Photos</h1>
+  <ul>
+    <% photos.forEach(function (photo) { %>
+    <li><a href="/#/photos/<%- photo.id %>"><%- photo.title %></a></li>
+    <% }); %>
+  </ul>
+</section>
+${ FooterView }

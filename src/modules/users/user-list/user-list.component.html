@@ -1,0 +1,10 @@
+${ HeaderView }
+<section class="container section">
+  <h1 class="title">Users</h1>
+  <ul>
+    <% users.forEach(function (user) { %>
+    <li><a href="/#/users/<%- user.id %>"><%- user.name %></a></li>
+    <% }); %>
+  </ul>
+</section>
+${ FooterView }

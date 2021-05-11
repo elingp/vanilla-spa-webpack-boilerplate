@@ -1,0 +1,16 @@
+${ HeaderView }
+<section class="container section">
+  <h2 class="subtitle">Photo Detail</h2>
+  <% for (const key in items) { %>
+  <p><%- key %>: <%- items[key] %></p>
+  <% }; %>
+  <div>
+    <p>Images</p>
+    <img src="<%- items.url %>" alt="<%- items.title %>" />
+  </div>
+  <div>
+    <p>Thumbnail Images</p>
+    <img src="<%- items.thumbnailUrl %>" alt="<%- items.title %>" />
+  </div>
+</section>
+${ FooterView }

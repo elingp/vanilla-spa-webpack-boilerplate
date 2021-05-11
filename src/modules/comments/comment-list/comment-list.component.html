@@ -1,0 +1,10 @@
+${ HeaderView }
+<section class="container section">
+  <h1 class="title">Comments</h1>
+  <ul>
+    <% comments.forEach(function (comment) { %>
+    <li><a href="/#/comments/<%- comment.id %>"><%- comment.name %></a></li>
+    <% }); %>
+  </ul>
+</section>
+${ FooterView }

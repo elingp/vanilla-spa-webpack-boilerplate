@@ -1,0 +1,17 @@
+# TEAM
+    Developer: Eling Pramuatmaja
+    Contact: elingpramuatmaja@gmail.com
+    Twitter: @eling_p
+    From: Bali, Indonesia
+
+# THANKS
+    Google: https://www.google.com
+    StackOverflow: https://stackoverflow.com/
+    MDN Web Docs: https://developer.mozilla.org/en-US/
+    Modern JavaScript Tutorial: https://javascript.info/
+
+# SITE
+    Last update: 2021-05-04
+    Languages: English
+    Frontend: HTML5, CSS3, JavaScript, AXIOS, main.css,
+              Babel, animate.css, Bulma, Font Awesome

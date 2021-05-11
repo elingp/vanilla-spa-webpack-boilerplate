@@ -1,0 +1,42 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+      - name: Create .env file
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_NODE_ENV: "production"
+          envkey_BASE_URL: ${{ secrets.BASE_URL }}
+          envkey_API_URL: ${{ secrets.API_URL }}
+          directory: "./"
+          filename: .env.production
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+            ${{ runner.os }}-
+      - name: Install dependencies
+        run: npm ci
+      - name: Build the app
+        run: npm run build
+      - name: Deploy the app
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          keep_files: true
