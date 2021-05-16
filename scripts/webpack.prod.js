@@ -52,6 +52,7 @@ module.exports = {
       "script-src": ["'self'", "'unsafe-eval'"],
       "style-src": [
         "'self'",
+        "'unsafe-inline'",
         "https://fonts.googleapis.com/",
         "https://cdnjs.cloudflare.com/",
       ],
