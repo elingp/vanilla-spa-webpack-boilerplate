@@ -32,7 +32,7 @@
     "lint:eslint": "eslint . --cache --ignore-path .gitignore",
     "lint:prettier": "prettier . --check --ignore-path .gitignore",
     "lint:sort-package-json": "sort-package-json package.json --check",
-    "lint:stylelint": "stylelint **/*.css --cache --ignore-path .gitignore",
+    "lint:stylelint": "stylelint \"**/*.css\" --cache --ignore-path .gitignore",
     "start": "webpack serve --config scripts/webpack.config.js --env env=dev",
     "start:dashboard": "webpack-dashboard -- webpack serve --config scripts/webpack.config.js --env env=dev --env addon=dashboard",
     "serve": "npm run build && http-server ./dist -p 8081 -g",
