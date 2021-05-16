@@ -30,8 +30,8 @@ module.exports = {
       "img-src": ["'self'", "data:", "https://via.placeholder.com/"],
       "script-src": ["'self'", "'unsafe-eval'"],
       "style-src": [
-        "'unsafe-inline'",
         "'self'",
+        "'unsafe-inline'",
         "https://fonts.googleapis.com/",
         "https://cdnjs.cloudflare.com/",
       ],
