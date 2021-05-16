@@ -1,0 +1,22 @@
+{
+  "icons": [
+    {
+      "src": "./assets/icon_512x512.f9e0d68625a0635c43278ffa7a56e422.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icon_192x192.529d71a9303f8d444312787844246468.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Vanilla SPA Webpack Boilerplate",
+  "short_name": "Vanilla SPA",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "SPA with vanilla js, Webpack 5, and opinionated configuration",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF"
+}

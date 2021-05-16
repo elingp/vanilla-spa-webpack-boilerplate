@@ -1,0 +1,20 @@
+/*!
+ * MDB5
+ *   Version: FREE 3.5.1
+ * 
+ * 
+ *   Copyright: Material Design for Bootstrap
+ *   https://mdbootstrap.com/
+ * 
+ *   Read the license: https://mdbootstrap.com/general/license/
+ * 
+ * 
+ *   Documentation: https://mdbootstrap.com/docs/standard/
+ * 
+ *   Support: https://mdbootstrap.com/support/
+ * 
+ *   Contact: office@mdbootstrap.com
+ * 
+ */
+
+/*! @license DOMPurify | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/2.2.2/LICENSE */
