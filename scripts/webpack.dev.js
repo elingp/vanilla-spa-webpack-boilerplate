@@ -2,7 +2,6 @@ const path = require("path");
 require("dotenv").config({
   path: path.resolve(__dirname, "..", ".env.development"),
 });
-const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 
 module.exports = {
@@ -18,24 +17,6 @@ module.exports = {
   plugins: [
     new Dotenv({
       path: path.resolve(__dirname, "..", ".env.development"),
-    }),
-    new CspHtmlWebpackPlugin({
-      "default-src": "'self'",
-      "connect-src": ["'self'", process.env.API_URL],
-      "font-src": [
-        "'self'",
-        "https://fonts.gstatic.com/",
-        "https://cdnjs.cloudflare.com/",
-      ],
-      "img-src": ["'self'", "data:", "https://via.placeholder.com/"],
-      "script-src": ["'self'", "'unsafe-eval'"],
-      "style-src": [
-        "'self'",
-        "'unsafe-inline'",
-        "https://fonts.googleapis.com/",
-        "https://cdnjs.cloudflare.com/",
-      ],
-      "form-action": "'self'",
     }),
   ],
   devServer: {

@@ -2,8 +2,8 @@ name: Integration
 
 on:
   push:
-    branches:
-      - "**"
+    branches-ignore:
+      - main
   pull_request:
     branches:
       - main
@@ -23,8 +23,7 @@ jobs:
           envkey_NODE_ENV: "production"
           envkey_BASE_URL: ${{ secrets.BASE_URL }}
           envkey_API_URL: ${{ secrets.API_URL }}
-          directory: "./"
-          filename: .env.production
+          file_name: .env.production
       - name: Cache node modules
         uses: actions/cache@v2
         with:

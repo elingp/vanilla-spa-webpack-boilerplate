@@ -3,7 +3,6 @@ const glob = require("glob");
 require("dotenv").config({
   path: path.resolve(__dirname, "..", ".env.production"),
 });
-const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
@@ -40,24 +39,6 @@ module.exports = {
       }),
     }),
     new CompressionPlugin(),
-    new CspHtmlWebpackPlugin({
-      "default-src": "'self'",
-      "connect-src": ["'self'", process.env.API_URL],
-      "font-src": [
-        "'self'",
-        "https://fonts.gstatic.com/",
-        "https://cdnjs.cloudflare.com/",
-      ],
-      "img-src": ["'self'", "data:", "https://via.placeholder.com/"],
-      "script-src": ["'self'", "'unsafe-eval'"],
-      "style-src": [
-        "'self'",
-        "'unsafe-inline'",
-        "https://fonts.googleapis.com/",
-        "https://cdnjs.cloudflare.com/",
-      ],
-      "form-action": "'self'",
-    }),
   ],
   optimization: {
     minimize: true,

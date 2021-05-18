@@ -34,7 +34,7 @@ npm run build
 npm test
 ```
 
-**Lint** or **Format** the code.
+**Lint** or **Format** the entire codebase.
 
 ```bash
 npm run lint
@@ -61,7 +61,7 @@ Check out the `package.json` for further information.
 - Latest webpack-dev-server that supports Webpack 5.
 - Bunch of Webpack loaders and plugins to increase developer experience.
 - Uses [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) to mock API.
-- Also includes **animate.css**, **Axios**, **Bulma**, **main.css**, and **Font Awesome 5** (inside `index.html`) as an example dependencies.
+- Also includes **animate.css**, **Axios**, **Bootstrap Material Design**, **main.css**, and **Font Awesome 5** (using CDN) as an example dependencies.
 
 ## Author
 
