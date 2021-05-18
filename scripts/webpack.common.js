@@ -1,5 +1,6 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
+const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
@@ -91,6 +92,24 @@ module.exports = {
     new PreloadWebpackPlugin({
       rel: "prefetch",
       include: "all",
+    }),
+    new CspHtmlWebpackPlugin({
+      "default-src": "'self'",
+      "connect-src": ["'self'", process.env.API_URL],
+      "font-src": [
+        "'self'",
+        "https://fonts.gstatic.com/",
+        "https://cdnjs.cloudflare.com/",
+      ],
+      "img-src": ["'self'", "data:", "https://via.placeholder.com/"],
+      "script-src": ["'self'", "'unsafe-eval'"],
+      "style-src": [
+        "'self'",
+        "'unsafe-inline'",
+        "https://fonts.googleapis.com/",
+        "https://cdnjs.cloudflare.com/",
+      ],
+      "form-action": "'self'",
     }),
     new LodashModuleReplacementPlugin(),
     new ESLintPlugin(),
