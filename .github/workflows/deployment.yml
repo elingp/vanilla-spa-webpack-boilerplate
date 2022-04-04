@@ -22,7 +22,7 @@ jobs:
           envkey_API_URL: ${{ secrets.API_URL }}
           file_name: .env.production
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
